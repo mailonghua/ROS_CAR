@@ -5,6 +5,7 @@
 ​		本项目主要的功能包括手柄或键盘控制基于麦轮的小车的运动，KCF跟踪、导航、SLAM建图等功能，后续会接入麦克风阵列实现语音控制、接入IOT系统，感兴趣的伙伴可以基于这个平台继续进行拓展。
 
 ​	 	PS:我做这个项目的初衷是能够实现远程控制的小车，主要用来照看宠物的功能
+演示视频：https://www.bilibili.com/video/BV1bZ4y1f7SZ?spm_id_from=333.999.0.0
 
 ![ROSCar](https://github.com/mailonghua/ROS_CAR/blob/master/4.Img/ROSCar.jpg)
 
