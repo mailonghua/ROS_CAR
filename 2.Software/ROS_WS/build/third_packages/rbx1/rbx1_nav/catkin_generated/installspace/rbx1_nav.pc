@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/install
+
+Name: rbx1_nav
+Description: Description of rbx1_nav
+Version: 0.4.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: dynamic_reconfigure

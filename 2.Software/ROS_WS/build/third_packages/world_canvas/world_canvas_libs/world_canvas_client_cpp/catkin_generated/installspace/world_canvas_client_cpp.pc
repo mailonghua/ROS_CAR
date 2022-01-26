@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/install
+
+Name: world_canvas_client_cpp
+Description: Description of world_canvas_client_cpp
+Version: 0.1.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lworld_canvas_client
+Requires: roscpp unique_id uuid_msgs visualization_msgs world_canvas_msgs

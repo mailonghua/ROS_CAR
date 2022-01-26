@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/install
+
+Name: delta_lidar
+Description: Description of delta_lidar
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

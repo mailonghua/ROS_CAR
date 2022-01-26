@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/install
+
+Name: robot_ctrl
+Description: Description of robot_ctrl
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

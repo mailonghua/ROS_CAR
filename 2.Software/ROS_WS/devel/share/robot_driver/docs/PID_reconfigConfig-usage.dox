@@ -1,0 +1,9 @@
+\subsubsection usage Usage
+\verbatim
+<node name="robot_driver" pkg="robot_driver" type="robot_driver">
+  <param name="Kp" type="int" value="300" />
+  <param name="Ki" type="int" value="0" />
+  <param name="Kd" type="int" value="200" />
+</node>
+\endverbatim
+

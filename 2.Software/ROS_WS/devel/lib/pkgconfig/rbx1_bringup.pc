@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/devel
+
+Name: rbx1_bringup
+Description: Description of rbx1_bringup
+Version: 0.4.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

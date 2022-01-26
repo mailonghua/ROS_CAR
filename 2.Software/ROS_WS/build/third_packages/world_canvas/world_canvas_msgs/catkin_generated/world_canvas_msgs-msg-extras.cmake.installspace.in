@@ -1,0 +1,2 @@
+set(world_canvas_msgs_MESSAGE_FILES "msg/Annotation.msg;msg/Annotations.msg;msg/AnnotationData.msg;msg/WorldCanvas.msg;msg/MapListEntry.msg")
+set(world_canvas_msgs_SERVICE_FILES "srv/DeleteMap.srv;srv/ListMaps.srv;srv/PublishMap.srv;srv/RenameMap.srv;srv/SaveMap.srv;srv/DeleteAnnotations.srv;srv/GetAnnotations.srv;srv/GetAnnotationsData.srv;srv/PubAnnotationsData.srv;srv/EditAnnotationsData.srv;srv/SaveAnnotationsData.srv;srv/ListWorlds.srv;srv/SetKeyword.srv;srv/SetRelationship.srv;srv/ResetDatabase.srv;srv/YAMLImport.srv;srv/YAMLExport.srv")

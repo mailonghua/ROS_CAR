@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/devel
+
+Name: polygon_layer
+Description: Description of polygon_layer
+Version: 0.4.2
+Cflags: -I/home/mailonghua/ros_ws/src/third_packages/frontier_exploration/polygon_layer/include -I/usr/include
+Libs: -L${prefix}/lib -lpolygon_layer
+Requires: costmap_2d geometry_msgs

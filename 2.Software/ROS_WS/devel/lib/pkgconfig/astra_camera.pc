@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/devel
+
+Name: astra_camera
+Description: Description of astra_camera
+Version: 0.3.0
+Cflags: -I/home/mailonghua/ros_ws/devel/include -I/home/mailonghua/ros_ws/src/ros_astra_camera/include
+Libs: -L${prefix}/lib -lastra_wrapper
+Requires: camera_info_manager dynamic_reconfigure image_transport nodelet sensor_msgs roscpp message_runtime

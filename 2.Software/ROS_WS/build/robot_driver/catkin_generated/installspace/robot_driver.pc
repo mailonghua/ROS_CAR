@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/install
+
+Name: robot_driver
+Description: Description of robot_driver
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy

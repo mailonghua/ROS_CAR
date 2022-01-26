@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mailonghua/ros_ws/src/ros_astra_camera/include/astra_camera/astra_device_info.h
+ostream
+-
+boost/cstdint.hpp
+-
+
+/home/mailonghua/ros_ws/src/ros_astra_camera/include/astra_camera/astra_device_manager.h
+astra_camera/astra_device_info.h
+/home/mailonghua/ros_ws/src/ros_astra_camera/include/astra_camera/astra_camera/astra_device_info.h
+boost/thread/mutex.hpp
+-
+vector
+-
+string
+-
+ostream
+-
+
+/home/mailonghua/ros_ws/src/ros_astra_camera/include/astra_camera/astra_exception.h
+cstdarg
+-
+cstdio
+-
+exception
+-
+string
+-
+
+/home/mailonghua/ros_ws/src/ros_astra_camera/src/list_devices.cpp
+iostream
+-
+astra_camera/astra_device_manager.h
+/home/mailonghua/ros_ws/src/ros_astra_camera/src/astra_camera/astra_device_manager.h
+astra_camera/astra_exception.h
+/home/mailonghua/ros_ws/src/ros_astra_camera/src/astra_camera/astra_exception.h
+

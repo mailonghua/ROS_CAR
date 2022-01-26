@@ -1,0 +1,16 @@
+-I/opt/ros/melodic/include
+-I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp
+-I/usr/include/eigen3
+-I/usr/include/OGRE/Overlay
+-I/usr/include/OGRE
+-I/usr/include
+-I/usr/include/opencv4
+-I/home/mailonghua/ros_ws/src/third_packages/Ros_Qt5_Gui_App
+-I/home/mailonghua/ros_ws/build/third_packages/Ros_Qt5_Gui_App
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="cyrobot_monitor"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-o
+/home/mailonghua/ros_ws/build/third_packages/Ros_Qt5_Gui_App/include/cyrobot_monitor/moc_dashboard.cpp
+/home/mailonghua/ros_ws/src/third_packages/Ros_Qt5_Gui_App/include/cyrobot_monitor/dashboard.h

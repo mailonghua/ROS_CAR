@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/install
+
+Name: polygon_layer
+Description: Description of polygon_layer
+Version: 0.4.2
+Cflags: -I${prefix}/include -I/usr/include
+Libs: -L${prefix}/lib -lpolygon_layer
+Requires: costmap_2d geometry_msgs

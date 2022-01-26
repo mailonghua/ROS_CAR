@@ -1,0 +1,23 @@
+\subsubsection usage Usage
+\verbatim
+<node name="Astra" pkg="astra_camera" type="Astra">
+  <param name="rgb_preferred" type="bool" value="True" />
+  <param name="ir_mode" type="int" value="5" />
+  <param name="color_mode" type="int" value="5" />
+  <param name="depth_mode" type="int" value="5" />
+  <param name="depth_registration" type="bool" value="True" />
+  <param name="color_depth_synchronization" type="bool" value="False" />
+  <param name="auto_exposure" type="bool" value="True" />
+  <param name="auto_white_balance" type="bool" value="True" />
+  <param name="data_skip" type="int" value="0" />
+  <param name="ir_time_offset" type="double" value="-0.033" />
+  <param name="color_time_offset" type="double" value="-0.033" />
+  <param name="depth_time_offset" type="double" value="-0.033" />
+  <param name="depth_ir_offset_x" type="double" value="5.0" />
+  <param name="depth_ir_offset_y" type="double" value="4.0" />
+  <param name="z_offset_mm" type="int" value="0" />
+  <param name="z_scaling" type="double" value="1.0" />
+  <param name="use_device_time" type="bool" value="True" />
+</node>
+\endverbatim
+

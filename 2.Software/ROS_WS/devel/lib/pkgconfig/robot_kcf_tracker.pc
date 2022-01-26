@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/devel
+
+Name: robot_kcf_tracker
+Description: Description of robot_kcf_tracker
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/install
+
+Name: uvc_camera
+Description: Description of uvc_camera
+Version: 0.2.7
+Cflags: 
+Libs: -L${prefix}/lib -lnodelet_uvc_camera
+Requires: roscpp nodelet sensor_msgs

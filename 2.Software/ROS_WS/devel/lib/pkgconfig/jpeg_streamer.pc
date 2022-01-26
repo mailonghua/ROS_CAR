@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/devel
+
+Name: jpeg_streamer
+Description: Description of jpeg_streamer
+Version: 0.2.7
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

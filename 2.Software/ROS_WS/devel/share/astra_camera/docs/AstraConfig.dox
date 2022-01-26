@@ -1,0 +1,22 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~rgb_preferred" : \b [bool] Preferred camera stream min: False, default: True, max: True
+- \b "~ir_mode" : \b [int] Video mode for IR camera min: 1, default: 5, max: 17
+- \b "~color_mode" : \b [int] Video mode for color camera min: 1, default: 5, max: 17
+- \b "~depth_mode" : \b [int] Video mode for depth camera min: 1, default: 5, max: 17
+- \b "~depth_registration" : \b [bool] Depth data registration min: False, default: True, max: True
+- \b "~color_depth_synchronization" : \b [bool] Synchronization of color and depth camera min: False, default: False, max: True
+- \b "~auto_exposure" : \b [bool] Auto-Exposure min: False, default: True, max: True
+- \b "~auto_white_balance" : \b [bool] Auto-White-Balance min: False, default: True, max: True
+- \b "~data_skip" : \b [int] Skip N images for every image published (rgb/depth/depth_registered/ir) min: 0, default: 0, max: 10
+- \b "~ir_time_offset" : \b [double] ir image time offset in seconds min: -1.0, default: -0.033, max: 1.0
+- \b "~color_time_offset" : \b [double] color image time offset in seconds min: -1.0, default: -0.033, max: 1.0
+- \b "~depth_time_offset" : \b [double] depth image time offset in seconds min: -1.0, default: -0.033, max: 1.0
+- \b "~depth_ir_offset_x" : \b [double] X offset between IR and depth images min: -20.0, default: 5.0, max: 20.0
+- \b "~depth_ir_offset_y" : \b [double] Y offset between IR and depth images min: -20.0, default: 4.0, max: 20.0
+- \b "~z_offset_mm" : \b [int] Z offset in mm min: -200, default: 0, max: 200
+- \b "~z_scaling" : \b [double] Scaling factor for depth values min: 0.5, default: 1.0, max: 1.5
+- \b "~use_device_time" : \b [bool] Use internal timer of OpenNI device min: False, default: True, max: True
+

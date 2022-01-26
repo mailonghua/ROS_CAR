@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/devel
+
+Name: camera_view
+Description: Description of camera_view
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

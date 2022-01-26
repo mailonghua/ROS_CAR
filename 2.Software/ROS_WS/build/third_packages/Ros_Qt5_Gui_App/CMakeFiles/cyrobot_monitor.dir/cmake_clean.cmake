@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "qrc_images.cpp"
+  "qrc_media.cpp"
+  "ui_loginwidget.h"
+  "ui_main_window.h"
+  "include/cyrobot_monitor/moc_main_window.cpp"
+  "include/cyrobot_monitor/moc_qnode.cpp"
+  "include/cyrobot_monitor/moc_qrviz.cpp"
+  "basewidget/moc_customwidget.cpp"
+  "include/cyrobot_monitor/moc_RobotAlgorithm.cpp"
+  "include/cyrobot_monitor/moc_dashboard.cpp"
+  "include/cyrobot_monitor/moc_joystick.cpp"
+  "include/cyrobot_monitor/moc_loginwidget.cpp"
+  "include/cyrobot_monitor/moc_robomap.cpp"
+  "CMakeFiles/cyrobot_monitor.dir/src/dashboard.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/src/joystick.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/src/loginwidget.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/src/main.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/src/main_window.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/src/qnode.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/src/qrviz.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/src/robomap.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/basewidget/customwidget.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/qrc_images.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/qrc_media.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/include/cyrobot_monitor/moc_main_window.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/include/cyrobot_monitor/moc_qnode.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/include/cyrobot_monitor/moc_qrviz.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/basewidget/moc_customwidget.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/include/cyrobot_monitor/moc_RobotAlgorithm.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/include/cyrobot_monitor/moc_dashboard.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/include/cyrobot_monitor/moc_joystick.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/include/cyrobot_monitor/moc_loginwidget.cpp.o"
+  "CMakeFiles/cyrobot_monitor.dir/include/cyrobot_monitor/moc_robomap.cpp.o"
+  "/home/mailonghua/ros_ws/devel/lib/cyrobot_monitor/cyrobot_monitor.pdb"
+  "/home/mailonghua/ros_ws/devel/lib/cyrobot_monitor/cyrobot_monitor"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/cyrobot_monitor.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

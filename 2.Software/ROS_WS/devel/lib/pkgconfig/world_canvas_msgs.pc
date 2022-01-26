@@ -1,0 +1,8 @@
+prefix=/home/mailonghua/ros_ws/devel
+
+Name: world_canvas_msgs
+Description: Description of world_canvas_msgs
+Version: 0.1.0
+Cflags: -I/home/mailonghua/ros_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs uuid_msgs geometry_msgs std_srvs message_runtime
