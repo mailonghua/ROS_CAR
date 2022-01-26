@@ -6,7 +6,7 @@
 
 ​	 	PS:我做这个项目的初衷是能够实现远程控制的小车，主要用来照看宠物的功能
 
-![ROSCar](D:\ProjectWorkSpace\ROS_CAR\Github_WS\ROS_CAR\4.Img\ROSCar.jpg)
+![ROSCar](..\4.Img\ROSCar.jpg)
 
 ## 2.硬件构成
 
