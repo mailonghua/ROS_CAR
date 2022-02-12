@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<launch>
+    <!--向参数服务器设置相关参数-->>
+    <param name="use_sim_time" value="false"/>
+    <param name="robot_description" textfile="$(find robot_driver)/urdf/robot_mecx.urdf"/>
+
+    <!--启动底层驱动包，建立与控制层的通信-->>
+     <node name="robot_driver" pkg="robot_driver" type="robot_driver" output="screen" respawn="true">
+        <!--从配置文件加载配置参数到参数服务器-->>
+        <rosparam file="$(find robot_driver)/config/robot_params.yaml" command="load"/>
+        <!--将node中的odom topic映射成名称为odom_raw-->>
+        <remap from="/odom" to="/odom_raw"/>
+        <!--给node中的参数赋值-->>
+        <param name="odom_frame" value="odom"/>
+        <param name="publish_odom_transform" value="false"/>
+     </node>
+
+    <!-- 启动EKF融合定位节点 -->
+    <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf" output="screen">
+        <param name="output_frame" value="odom"/>
+        <param name="base_footprint_frame" value="base_footprint"/>
+        <param name="freq" value="30.0"/>
+        <param name="sensor_timeout" value="0.5"/>
+        <param name="odom_used" value="true"/>
+        <param name="imu_used"  value="true"/>
+        <param name="vo_used"   value="false"/>
+        <remap from="odom" to="/odom_raw"/>
+        <remap from="/imu_data" to="/imu"/>
+        <remap from="/robot_pose_ekf/odom_combined" to="/odom_combined"/>
+    </node>
+    <!--将EKF发布的话题odom_combined的消息类型进行转换，转换为Odometry类型，能够被RVIZ中显示的-->>
+    <node pkg="robot_navigation" type="odom_ekf.py" name="odom_ekf_node" output="screen">
+        <remap from="input" to="/odom_combined"/>
+        <remap from="output" to="/odom"/>
+    </node>
+
+    <!--启动激光雷达节点-->>
+    <include file="$(find delta_lidar)/launch/delta_lidar.launch"/>
+    <!--建立静态坐标关系，base_foot_print到laser-->
+    <node pkg="tf" type="static_transform_publisher" name="base_foot_print_to_laser" args="0 0 0.175 -2.35619445 0 0 base_footprint laser 20"/>
+    
+    <!--设置激光雷达的过滤器-->>
+    <node pkg="laser_filters" type="scan_to_scan_filter_chain" output="log" name="laser_filter">
+        <rosparam command="load" file="$(find robot_navigation)/config/robot_laserfilter.yaml"/>
+        <remap from="/scan" to="/scan_raw"/>
+        <remap from="/scan_filtered" to="/scan"/>
+    </node>
+    <!--这是一个开源的包，将机器人的状态发布到tf2:http://wiki.ros.org/robot_state_publisher-->>
+    <node  name="robot_state_publisher"  pkg="robot_state_publisher" type="robot_state_publisher" />
+
+    <!--建立base_footprint到IMU的静态坐标系-->>
+    <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_imu" args="-0.0205 -0.04064 0.085 0 0 0 base_footprint base_imu_link 20"/>
+</launch>

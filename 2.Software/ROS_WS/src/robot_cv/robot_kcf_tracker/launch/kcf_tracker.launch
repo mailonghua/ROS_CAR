@@ -1,0 +1,10 @@
+<launch>
+    <!-- 启动深度摄像头驱动包,该会触发多个topic，深度图像、IR和RGB图像 -->
+	<include file="$(find astra_camera)/launch/stereo_s.launch" />
+    <include file="$(find robot_driver)/launch/robot_driver.launch"/>
+    <node pkg="robot_kcf_tracker" name="robot_kcf_tracker" type="kcf_tracker" output="screen">
+        <remap from="/camera/rgb/image_color" to="/camera/rgb/image_raw"/>
+        <remap from="/camera/depth/image" to="/camera/depth/image"/>
+		<remap from="/tracker/cmd_vel" to="/cmd_vel"/>
+    </node>
+</launch>

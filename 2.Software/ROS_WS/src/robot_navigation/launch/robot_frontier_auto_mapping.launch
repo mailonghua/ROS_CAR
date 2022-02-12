@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- 启动底盘及激光雷达驱动包 -->
+	<include file="$(find robot_navigation)/launch/robot_nav_prepare.launch" />
+
+	<!-- 启动深度摄像头驱动包,该会触发多个topic，深度图像、IR和RGB图像 -->
+	<!-- <include file="$(find astra_camera)/launch/stereo_s.launch" /> -->
+	<!-- <include file="$(find xtark_driver)/launch/xtark_camera.launch">
+		<arg name="resolution" value="$(arg resolution)"/>
+		<arg name="device" value="$(arg device)"/>
+	</include> -->
+	
+	<!-- 启动GMapping建图算法包 -->
+    <include file="$(find robot_navigation)/launch/include/gmapping_base.launch" />
+
+    <!-- 启动路径规划算法包 -->	
+	<include file="$(find robot_navigation)/launch/include/move_base_mecx.launch"/>
+
+    	<!-- 启动自探索建图算法包 -->	
+	<include file="$(find exploration_server)/launch/exploration.launch"/>
+
+	<!-- 启动APP相关接口服务 -->	
+	<!-- <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/> -->
+	<!-- 一个固定的package,用于将机器人的位置发布到map中:A Simple Node to Publish the Robot's Position Relative to the Map using TFs -->
+	<node name="robot_pose_publisher" pkg="robot_pose_publisher" type="robot_pose_publisher"/>
+    <arg name="debug" default="false"/>
+	<!-- World canvas server 是语义地图的存储管理器,是用来地图的存储 -->
+    <node pkg="world_canvas_server" type="map_manager.py" name="map_manager" />
+
+</launch>

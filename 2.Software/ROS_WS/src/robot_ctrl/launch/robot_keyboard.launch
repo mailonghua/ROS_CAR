@@ -1,0 +1,6 @@
+<launch>
+    <!--Start robot_drive-->
+    <!-- <include file="$(find robot_driver)/launch/robot_driver.launch"/> -->
+    <!--Start keyboard ros node-->
+    <node name="robot_twist_keyboard" pkg="robot_ctrl" type="robot_twist_keyboard.py" output="screen" respawn="false"/>
+</launch>

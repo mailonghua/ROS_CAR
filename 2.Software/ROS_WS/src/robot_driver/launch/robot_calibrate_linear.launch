@@ -1,0 +1,10 @@
+<launch>
+    <param name="use_sim_time" value="false"/>
+    <node name="robot_driver" pkg="robot_driver" type="robot_driver" output="screen" respawn="true">
+        <rosparam file="$(find robot_driver)/config/robot_params.yaml" command="load"/>
+		<param name="publish_odom_transform" value="true"/>
+		<param name="odom_frame"             value="/odom"/>
+    </node>
+    <node name="calibrate_linear" pkg="robot_driver" type="calibrate_linear.py" output="screen"/>
+    <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_imu" args="-0.0205 -0.04064 0.085 0 0 0 base_footprint base_imu_link 100"/>
+</launch>

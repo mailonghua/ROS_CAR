@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- 用来设置是自动建图还是手动建图 -->
+	<arg name="slam_type" default="manual" doc="slam type [manual auto]"/>
+	<!-- 用来设置建图的算法 -->
+	<arg name="slam_methods" default="gmapping" doc="slam type [gmapping,karto,hector,cartographer]"/>
+	<group if="$(eval arg('slam_type') == 'manual')">
+		<!-- 启动选中的SLAM算法 -->	
+		<include file="$(find robot_navigation)/launch/robot_$(arg slam_methods)_mapping.launch" />
+	</group>
+
+	<group if="$(eval arg('slam_type') == 'auto')">
+		<!-- 启动frontier自动导航的算法包，在该包中默认使用gmapping进行建图-->	
+		<include file="$(find robot_navigation)/launch/robot_frontier_auto_mapping.launch" />
+	</group>
+
+</launch>
