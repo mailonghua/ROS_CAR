@@ -47,7 +47,7 @@
 
 ​		6.third_packages：一些三方的节点
 
-![Roscore](https://github.com/mailonghua/ROS_CAR/blob/master/4.Img/ROSCar.jpg)
+![Roscore](https://github.com/mailonghua/ROS_CAR/blob/master/4.Img/Roscore.png)
 
 ## 4.关于购买的一些材料
 
